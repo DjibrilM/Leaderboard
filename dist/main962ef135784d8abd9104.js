@@ -32,8 +32,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
 }
 
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -41,7 +41,6 @@ body {
   font-family: 'Lato', sans-serif;
   scroll-behavior: smooth;
 }
-
 
 main {
   display: flex;
@@ -64,8 +63,6 @@ main {
   background-color: var(--primary-color);
 }
 
-
-
 .score-section header .header-container {
   display: flex;
   justify-content: space-between;
@@ -73,8 +70,7 @@ main {
   padding: 20px;
 }
 
-.logo
-{
+.logo {
   position: fixed;
   top: 20px;
   color: white;
@@ -130,19 +126,16 @@ button:active {
   border-radius: 10px;
 }
 
-
-
 .score-section ul li {
-  margin: 20px 0px;
+  margin: 20px 0;
   list-style: none;
   height: 70px;
   display: flex;
-  padding: 0px 20px;
+  padding: 0 20px;
   align-items: center;
   justify-content: space-between;
   border: 1px solid rgba(0, 0, 0, 0.222);
 }
-
 
 .person-info {
   display: flex;
@@ -165,7 +158,7 @@ button:active {
 
 .form-section {
   background: var(--white-color);
-  margin: 30px 0px;
+  margin: 30px 0;
   flex-basis: 30%;
   height: 100%;
 }
@@ -176,13 +169,12 @@ button:active {
   background-color: var(--primary-color);
 }
 
-
 .form-section header .header-container {
   display: flex;
   height: 100%;
   align-items: center;
   color: var(--white-color);
-  padding: 0px 20px;
+  padding: 0 20px;
 }
 
 .form-section form {
@@ -192,7 +184,7 @@ button:active {
 }
 
 .form-section form .input-container {
-  margin: 10px 0px;
+  margin: 10px 0;
   display: flex;
   width: 100%;
   border: 0.5px solid rgba(0, 0, 0, 0.36);
@@ -213,7 +205,8 @@ button:active {
   border-radius: 5px;
   cursor: pointer;
   color: white;
-}`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAIA;EACE,0CAA0C;EAC1C,6BAA6B;EAC7B,mBAAmB;EACnB,iBAAiB;EACjB,0BAA0B;EAC1B,2BAA2B;AAC7B;;AAEA;EACE,WAAW;EACX,YAAY;AACd;;AAEA;EACE,0FAA0F;EAC1F,+BAA+B;EAC/B,uBAAuB;AACzB;;;AAGA;EACE,aAAa;EACb,gBAAgB;EAChB,WAAW;EACX,uBAAuB;AACzB;;AAEA;EACE,8BAA8B;EAC9B,YAAY;EACZ,eAAe;EACf,iBAAiB;AACnB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,sCAAsC;AACxC;;;;AAIA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,aAAa;AACf;;AAEA;;EAEE,eAAe;EACf,SAAS;EACT,YAAY;AACd;;AAEA;EACE,aAAa;EACb,SAAS;EACT,YAAY;EACZ,kBAAkB;EAClB,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,kBAAkB;EAClB,kBAAkB;EAClB,2BAA2B;EAC3B,2BAA2B;EAC3B,WAAW;EACX,eAAe;EACf,kBAAkB;EAClB,YAAY;EACZ,oCAAoC;EACpC,4BAA4B;AAC9B;;AAEA;EACE,qBAAqB;EACrB,gDAAgD;EAChD,wDAAwD;EACxD,qDAAqD;AACvD;;AAEA;EACE,YAAY;EACZ,SAAS;EACT,+BAA+B;EAC/B,cAAc;EACd,mBAAmB;AACrB;;AAEA;EACE,6BAA6B;EAC7B,UAAU;AACZ;;AAEA;EACE,sCAAsC;EACtC,mBAAmB;AACrB;;;;AAIA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,YAAY;EACZ,aAAa;EACb,iBAAiB;EACjB,mBAAmB;EACnB,8BAA8B;EAC9B,sCAAsC;AACxC;;;AAGA;EACE,aAAa;EACb,mBAAmB;EACnB,SAAS;AACX;;AAEA;EACE,aAAa;EACb,WAAW;EACX,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,YAAY;EACZ,mBAAmB;EACnB,uBAAuB;EACvB,mBAAmB;EACnB,sCAAsC;AACxC;;AAEA;EACE,8BAA8B;EAC9B,gBAAgB;EAChB,eAAe;EACf,YAAY;AACd;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,sCAAsC;AACxC;;;AAGA;EACE,aAAa;EACb,YAAY;EACZ,mBAAmB;EACnB,yBAAyB;EACzB,iBAAiB;AACnB;;AAEA;EACE,YAAY;EACZ,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,gBAAgB;EAChB,aAAa;EACb,WAAW;EACX,uCAAuC;AACzC;;AAEA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;;AAEA;EACE,gBAAgB;EAChB,kBAAkB;EAClB,aAAa;EACb,sCAAsC;EACtC,YAAY;EACZ,kBAAkB;EAClB,eAAe;EACf,YAAY;AACd","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');\n\n\n\n:root {\n  --primary-color: rgba(135, 63, 236, 0.968);\n  --text-color: rgb(15, 14, 14);\n  --white-color: #fff;\n  --text-font: 15px;\n  --heading-large-font: 25px;\n  --heading-medium-font: 30px;\n}\n\n* {\n  margin: 0px;\n  padding: 0px;\n}\n\nbody {\n  background: linear-gradient(to right, rgba(103, 10, 232, 0.634), rgba(181, 7, 181, 0.618));\n  font-family: 'Lato', sans-serif;\n  scroll-behavior: smooth;\n}\n\n\nmain {\n  display: flex;\n  margin-top: 50px;\n  width: 100%;\n  justify-content: center;\n}\n\n.score-section {\n  background: var(--white-color);\n  margin: 30px;\n  flex-basis: 45%;\n  min-height: 500px;\n}\n\n.score-section header {\n  width: 100%;\n  height: 60px;\n  position: relative;\n  background-color: var(--primary-color);\n}\n\n\n\n.score-section header .header-container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 20px;\n}\n\n.logo\n{\n  position: fixed;\n  top: 20px;\n  color: white;\n}\n\n.title-container {\n  display: flex;\n  gap: 10px;\n  color: white;\n  position: relative;\n  bottom: 10px;\n}\n\n.title-container img {\n  width: 30px;\n}\n\n.refresh-btn {\n  padding: 12px 30px;\n  position: relative;\n  font-size: var(--text-font);\n  color: var(--primary-color);\n  bottom: 6px;\n  cursor: pointer;\n  border-radius: 4px;\n  border: none;\n  background-color: var(--white-color);\n  transition: 0.1s ease-in-out;\n}\n\nbutton:active {\n  transform: scale(0.9);\n  box-shadow: 2px 6px 24px 6px rgba(0, 0, 0, 0.43);\n  -webkit-box-shadow: 2px 6px 24px 6px rgba(0, 0, 0, 0.43);\n  -moz-box-shadow: 2px 6px 24px 6px rgba(0, 0, 0, 0.43);\n}\n\n.score-section ul {\n  margin: 10px;\n  gap: 40px;\n  max-height: calc(100vh - 250px);\n  overflow: auto;\n  padding-right: 10px;\n}\n\n.score-section ul::-webkit-scrollbar {\n  background-color: transparent;\n  width: 5px;\n}\n\n.score-section ul::-webkit-scrollbar-thumb {\n  background-color: var(--primary-color);\n  border-radius: 10px;\n}\n\n\n\n.score-section ul li {\n  margin: 20px 0px;\n  list-style: none;\n  height: 70px;\n  display: flex;\n  padding: 0px 20px;\n  align-items: center;\n  justify-content: space-between;\n  border: 1px solid rgba(0, 0, 0, 0.222);\n}\n\n\n.person-info {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n\n.score-section ul li .person-infos-icon {\n  display: flex;\n  width: 50px;\n  position: relative;\n  right: 10px;\n  color: white;\n  height: 50px;\n  border-radius: 100%;\n  justify-content: center;\n  align-items: center;\n  background-color: var(--primary-color);\n}\n\n.form-section {\n  background: var(--white-color);\n  margin: 30px 0px;\n  flex-basis: 30%;\n  height: 100%;\n}\n\n.form-section header {\n  width: 100%;\n  height: 60px;\n  background-color: var(--primary-color);\n}\n\n\n.form-section header .header-container {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  color: var(--white-color);\n  padding: 0px 20px;\n}\n\n.form-section form {\n  margin: 20px;\n  display: flex;\n  flex-direction: column;\n}\n\n.form-section form .input-container {\n  margin: 10px 0px;\n  display: flex;\n  width: 100%;\n  border: 0.5px solid rgba(0, 0, 0, 0.36);\n}\n\n.form-section form .input-container input {\n  padding: 15px 20px;\n  width: 100%;\n  border: none;\n}\n\n.form-section form button {\n  margin-top: 20px;\n  padding: 15px 20px;\n  outline: none;\n  background-color: var(--primary-color);\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  color: white;\n}"],"sourceRoot":""}]);
+}
+`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAEA;EACE,0CAA0C;EAC1C,6BAA6B;EAC7B,mBAAmB;EACnB,iBAAiB;EACjB,0BAA0B;EAC1B,2BAA2B;AAC7B;;AAEA;EACE,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,0FAA0F;EAC1F,+BAA+B;EAC/B,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,gBAAgB;EAChB,WAAW;EACX,uBAAuB;AACzB;;AAEA;EACE,8BAA8B;EAC9B,YAAY;EACZ,eAAe;EACf,iBAAiB;AACnB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,sCAAsC;AACxC;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,aAAa;AACf;;AAEA;EACE,eAAe;EACf,SAAS;EACT,YAAY;AACd;;AAEA;EACE,aAAa;EACb,SAAS;EACT,YAAY;EACZ,kBAAkB;EAClB,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,kBAAkB;EAClB,kBAAkB;EAClB,2BAA2B;EAC3B,2BAA2B;EAC3B,WAAW;EACX,eAAe;EACf,kBAAkB;EAClB,YAAY;EACZ,oCAAoC;EACpC,4BAA4B;AAC9B;;AAEA;EACE,qBAAqB;EACrB,gDAAgD;EAChD,wDAAwD;EACxD,qDAAqD;AACvD;;AAEA;EACE,YAAY;EACZ,SAAS;EACT,+BAA+B;EAC/B,cAAc;EACd,mBAAmB;AACrB;;AAEA;EACE,6BAA6B;EAC7B,UAAU;AACZ;;AAEA;EACE,sCAAsC;EACtC,mBAAmB;AACrB;;AAEA;EACE,cAAc;EACd,gBAAgB;EAChB,YAAY;EACZ,aAAa;EACb,eAAe;EACf,mBAAmB;EACnB,8BAA8B;EAC9B,sCAAsC;AACxC;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,SAAS;AACX;;AAEA;EACE,aAAa;EACb,WAAW;EACX,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,YAAY;EACZ,mBAAmB;EACnB,uBAAuB;EACvB,mBAAmB;EACnB,sCAAsC;AACxC;;AAEA;EACE,8BAA8B;EAC9B,cAAc;EACd,eAAe;EACf,YAAY;AACd;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,sCAAsC;AACxC;;AAEA;EACE,aAAa;EACb,YAAY;EACZ,mBAAmB;EACnB,yBAAyB;EACzB,eAAe;AACjB;;AAEA;EACE,YAAY;EACZ,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,cAAc;EACd,aAAa;EACb,WAAW;EACX,uCAAuC;AACzC;;AAEA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;;AAEA;EACE,gBAAgB;EAChB,kBAAkB;EAClB,aAAa;EACb,sCAAsC;EACtC,YAAY;EACZ,kBAAkB;EAClB,eAAe;EACf,YAAY;AACd","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');\n\n:root {\n  --primary-color: rgba(135, 63, 236, 0.968);\n  --text-color: rgb(15, 14, 14);\n  --white-color: #fff;\n  --text-font: 15px;\n  --heading-large-font: 25px;\n  --heading-medium-font: 30px;\n}\n\n* {\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background: linear-gradient(to right, rgba(103, 10, 232, 0.634), rgba(181, 7, 181, 0.618));\n  font-family: 'Lato', sans-serif;\n  scroll-behavior: smooth;\n}\n\nmain {\n  display: flex;\n  margin-top: 50px;\n  width: 100%;\n  justify-content: center;\n}\n\n.score-section {\n  background: var(--white-color);\n  margin: 30px;\n  flex-basis: 45%;\n  min-height: 500px;\n}\n\n.score-section header {\n  width: 100%;\n  height: 60px;\n  position: relative;\n  background-color: var(--primary-color);\n}\n\n.score-section header .header-container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 20px;\n}\n\n.logo {\n  position: fixed;\n  top: 20px;\n  color: white;\n}\n\n.title-container {\n  display: flex;\n  gap: 10px;\n  color: white;\n  position: relative;\n  bottom: 10px;\n}\n\n.title-container img {\n  width: 30px;\n}\n\n.refresh-btn {\n  padding: 12px 30px;\n  position: relative;\n  font-size: var(--text-font);\n  color: var(--primary-color);\n  bottom: 6px;\n  cursor: pointer;\n  border-radius: 4px;\n  border: none;\n  background-color: var(--white-color);\n  transition: 0.1s ease-in-out;\n}\n\nbutton:active {\n  transform: scale(0.9);\n  box-shadow: 2px 6px 24px 6px rgba(0, 0, 0, 0.43);\n  -webkit-box-shadow: 2px 6px 24px 6px rgba(0, 0, 0, 0.43);\n  -moz-box-shadow: 2px 6px 24px 6px rgba(0, 0, 0, 0.43);\n}\n\n.score-section ul {\n  margin: 10px;\n  gap: 40px;\n  max-height: calc(100vh - 250px);\n  overflow: auto;\n  padding-right: 10px;\n}\n\n.score-section ul::-webkit-scrollbar {\n  background-color: transparent;\n  width: 5px;\n}\n\n.score-section ul::-webkit-scrollbar-thumb {\n  background-color: var(--primary-color);\n  border-radius: 10px;\n}\n\n.score-section ul li {\n  margin: 20px 0;\n  list-style: none;\n  height: 70px;\n  display: flex;\n  padding: 0 20px;\n  align-items: center;\n  justify-content: space-between;\n  border: 1px solid rgba(0, 0, 0, 0.222);\n}\n\n.person-info {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n\n.score-section ul li .person-infos-icon {\n  display: flex;\n  width: 50px;\n  position: relative;\n  right: 10px;\n  color: white;\n  height: 50px;\n  border-radius: 100%;\n  justify-content: center;\n  align-items: center;\n  background-color: var(--primary-color);\n}\n\n.form-section {\n  background: var(--white-color);\n  margin: 30px 0;\n  flex-basis: 30%;\n  height: 100%;\n}\n\n.form-section header {\n  width: 100%;\n  height: 60px;\n  background-color: var(--primary-color);\n}\n\n.form-section header .header-container {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  color: var(--white-color);\n  padding: 0 20px;\n}\n\n.form-section form {\n  margin: 20px;\n  display: flex;\n  flex-direction: column;\n}\n\n.form-section form .input-container {\n  margin: 10px 0;\n  display: flex;\n  width: 100%;\n  border: 0.5px solid rgba(0, 0, 0, 0.36);\n}\n\n.form-section form .input-container input {\n  padding: 15px 20px;\n  width: 100%;\n  border: none;\n}\n\n.form-section form button {\n  margin-top: 20px;\n  padding: 15px 20px;\n  outline: none;\n  background-color: var(--primary-color);\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  color: white;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -789,9 +782,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _check_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./check.png */ "./src/check.png");
 
 
+const addScoreForm = document.querySelector("form");
+
+
+//add score
+const sendScore = (e) => {
+    e.preventDefault();
+    console.log("djibril mark")
+}
+addScoreForm.addEventListener("submit",sendScore);
+    
+
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main7fe32eced6f628b8b1ae.js.map
+//# sourceMappingURL=main962ef135784d8abd9104.js.map
