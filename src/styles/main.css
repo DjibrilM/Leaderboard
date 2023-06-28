@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-
-
 :root {
   --primary-color: rgba(135, 63, 236, 0.968);
   --text-color: rgb(15, 14, 14);
@@ -12,8 +10,8 @@
 }
 
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -21,7 +19,6 @@ body {
   font-family: 'Lato', sans-serif;
   scroll-behavior: smooth;
 }
-
 
 main {
   display: flex;
@@ -44,8 +41,6 @@ main {
   background-color: var(--primary-color);
 }
 
-
-
 .score-section header .header-container {
   display: flex;
   justify-content: space-between;
@@ -53,8 +48,7 @@ main {
   padding: 20px;
 }
 
-.logo
-{
+.logo {
   position: fixed;
   top: 20px;
   color: white;
@@ -110,19 +104,16 @@ button:active {
   border-radius: 10px;
 }
 
-
-
 .score-section ul li {
-  margin: 20px 0px;
+  margin: 20px 0;
   list-style: none;
   height: 70px;
   display: flex;
-  padding: 0px 20px;
+  padding: 0 20px;
   align-items: center;
   justify-content: space-between;
   border: 1px solid rgba(0, 0, 0, 0.222);
 }
-
 
 .person-info {
   display: flex;
@@ -145,7 +136,7 @@ button:active {
 
 .form-section {
   background: var(--white-color);
-  margin: 30px 0px;
+  margin: 30px 0;
   flex-basis: 30%;
   height: 100%;
 }
@@ -156,13 +147,12 @@ button:active {
   background-color: var(--primary-color);
 }
 
-
 .form-section header .header-container {
   display: flex;
   height: 100%;
   align-items: center;
   color: var(--white-color);
-  padding: 0px 20px;
+  padding: 0 20px;
 }
 
 .form-section form {
@@ -172,7 +162,7 @@ button:active {
 }
 
 .form-section form .input-container {
-  margin: 10px 0px;
+  margin: 10px 0;
   display: flex;
   width: 100%;
   border: 0.5px solid rgba(0, 0, 0, 0.36);
