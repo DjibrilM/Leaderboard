@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  --primary-color: rgba(135, 63, 236, 0.968);
+  --text-color: rgb(15, 14, 14);
+  --white-color: #fff;
+  --text-font: 15px;
+  --heading-large-font: 25px;
+  --heading-medium-font: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, rgba(103, 10, 232, 0.634), rgba(181, 7, 181, 0.618));
+  font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
+}
+
+main {
+  display: flex;
+  margin-top: 50px;
+  width: 100%;
+  justify-content: center;
+}
+
+.score-section {
+  background: var(--white-color);
+  margin: 30px;
+  flex-basis: 45%;
+  min-height: 500px;
+}
+
+.score-section header {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  background-color: var(--primary-color);
+}
+
+.score-section header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  color: white;
+}
+
+.title-container {
+  display: flex;
+  gap: 10px;
+  color: white;
+  position: relative;
+  bottom: 10px;
+}
+
+.title-container img {
+  width: 30px;
+}
+
+.refresh-btn {
+  padding: 12px 30px;
+  position: relative;
+  font-size: var(--text-font);
+  color: var(--primary-color);
+  bottom: 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--white-color);
+  transition: 0.1s ease-in-out;
+}
+
+button:active {
+  transform: scale(0.9);
+  box-shadow: 2px 6px 24px 6px rgba(0, 0, 0, 0.43);
+  -webkit-box-shadow: 2px 6px 24px 6px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 2px 6px 24px 6px rgba(0, 0, 0, 0.43);
+}
+
+.score-section ul {
+  margin: 10px;
+  gap: 40px;
+  max-height: calc(100vh - 250px);
+  overflow: auto;
+  padding-right: 10px;
+}
+
+.score-section ul::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+
+.score-section ul::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+.score-section ul li {
+  margin: 20px 0;
+  list-style: none;
+  height: 70px;
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.222);
+}
+
+.person-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.score-section ul li .person-infos-icon {
+  display: flex;
+  width: 50px;
+  position: relative;
+  right: 10px;
+  color: white;
+  height: 50px;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+.form-section {
+  background: var(--white-color);
+  margin: 30px 0;
+  flex-basis: 30%;
+  height: 100%;
+}
+
+.form-section header {
+  width: 100%;
+  height: 60px;
+  background-color: var(--primary-color);
+}
+
+.form-section header .header-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  color: var(--white-color);
+  padding: 0 20px;
+}
+
+.form-section form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section form .input-container {
+  margin: 10px 0;
+  display: flex;
+  width: 100%;
+  border: 0.5px solid rgba(0, 0, 0, 0.36);
+}
+
+.form-section form .input-container input {
+  padding: 15px 20px;
+  width: 100%;
+  border: none;
+}
+
+.form-section form button {
+  margin-top: 20px;
+  padding: 15px 20px;
+  outline: none;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}

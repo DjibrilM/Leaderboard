@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <main>
+        <section class="score-section">
+            <header>
+                <h1 class="logo">Leaderboard</h1>
+                <div class="header-container">
+                    <div class="title-container">
+                        <img src="check.png" alt="">
+                        <h1>Recent scores</h1>
+                    </div>
+
+                    <button class="refresh-btn">
+                        <i class='bx bx-refresh'></i>
+                        Refresh
+                    </button>
+                </div>
+            </header>
+
+            <ul>
+               
+                <li>
+                    <div class="person-info">
+                        <div class="person-infos-icon">
+                            <h1>M</h1>
+                        </div>
+                        <h4>Marc Wisley</h4>
+                    </div>
+
+
+                    <div class="score-infos">
+                        <p>score: <strong>40</strong></p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="person-info">
+                        <div class="person-infos-icon">
+                            <h1>B</h1>
+                        </div>
+                        <h4>Boris Kirman</h4>
+                    </div>
+
+
+                    <div class="score-infos">
+                        <p>score: <strong>40</strong></p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="form-section">
+            <header>
+                <div class="header-container">
+                    <h3>Add your score</h3>
+                </div>
+            </header>
+
+            <form action="">
+                <div class="input-container">
+                    <input placeholder="Your Name" type="text">
+                </div>
+
+                <div class="input-container">
+                    <input placeholder="Your Score" type="text">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
