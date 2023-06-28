@@ -215,14 +215,7 @@ button:active {
   display: none;
 }
 
-
-
-
-
-
-
 /* //loading spinner */
-
 .form-section form button.loading .loader {
   display: block;
 }
