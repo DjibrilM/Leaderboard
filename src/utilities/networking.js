@@ -16,6 +16,7 @@ export const fetchScores = async () => {
   }
 };
 
+
 export const postScore = async (requestBody) => {
   try {
     const request = await fetch(`${url}games/${uniqueId}/scores`, {

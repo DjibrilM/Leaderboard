@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todo</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script defer src="main962ef135784d8abd9104.js"></script>
-</head>
+<script defer src="main6910977747916575dccb.js"></script></head>
 
 <body>
     <main>
@@ -20,15 +19,17 @@
                         <h1>Recent scores</h1>
                     </div>
 
-                    <button class="refresh-btn">
-                        <i class='bx bx-refresh'></i>
+                    <button class="refresh-btn ">
+                            <i class='bx bx-refresh'></i>
                         Refresh
                     </button>
                 </div>
             </header>
 
             <ul>
-
+                <div class="loading-indicator">
+                    <p>...Loading</p>
+                </div>
             </ul>
         </section>
 
@@ -41,13 +42,16 @@
 
             <form action="">
                 <div class="input-container">
-                    <input placeholder="Your Name" type="text">
+                    <input placeholder="Your Name" class="username" type="text">
                 </div>
 
                 <div class="input-container">
-                    <input placeholder="Your Score" type="text">
+                    <input placeholder="Your Score" class="scoreInput" type="number">
                 </div>
-                <button type="submit">Submit</button>
+                <button class="submit-button" type="submit">
+                    <div class="loader">Loading...</div>
+                    <h4>submit</h4>
+                </button>
             </form>
         </section>
     </main>
