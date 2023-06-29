@@ -93,12 +93,23 @@ main {
   position: relative;
   font-size: var(--text-font);
   color: var(--primary-color);
-  bottom: 6px;
+  bottom: 10px;
   cursor: pointer;
   border-radius: 4px;
   border: none;
   background-color: var(--white-color);
   transition: 0.1s ease-in-out;
+}
+
+.refresh-btn.loading i {
+  animation: spin 0.5s linear infinite;
+  height: 10px;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 button:active {
@@ -114,6 +125,14 @@ button:active {
   max-height: calc(100vh - 250px);
   overflow: auto;
   padding-right: 10px;
+}
+
+.loading-indicator {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .score-section ul::-webkit-scrollbar {
@@ -205,8 +224,24 @@ button:active {
   border-radius: 5px;
   cursor: pointer;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAEA;EACE,0CAA0C;EAC1C,6BAA6B;EAC7B,mBAAmB;EACnB,iBAAiB;EACjB,0BAA0B;EAC1B,2BAA2B;AAC7B;;AAEA;EACE,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,0FAA0F;EAC1F,+BAA+B;EAC/B,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,gBAAgB;EAChB,WAAW;EACX,uBAAuB;AACzB;;AAEA;EACE,8BAA8B;EAC9B,YAAY;EACZ,eAAe;EACf,iBAAiB;AACnB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,sCAAsC;AACxC;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,aAAa;AACf;;AAEA;EACE,eAAe;EACf,SAAS;EACT,YAAY;AACd;;AAEA;EACE,aAAa;EACb,SAAS;EACT,YAAY;EACZ,kBAAkB;EAClB,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,kBAAkB;EAClB,kBAAkB;EAClB,2BAA2B;EAC3B,2BAA2B;EAC3B,WAAW;EACX,eAAe;EACf,kBAAkB;EAClB,YAAY;EACZ,oCAAoC;EACpC,4BAA4B;AAC9B;;AAEA;EACE,qBAAqB;EACrB,gDAAgD;EAChD,wDAAwD;EACxD,qDAAqD;AACvD;;AAEA;EACE,YAAY;EACZ,SAAS;EACT,+BAA+B;EAC/B,cAAc;EACd,mBAAmB;AACrB;;AAEA;EACE,6BAA6B;EAC7B,UAAU;AACZ;;AAEA;EACE,sCAAsC;EACtC,mBAAmB;AACrB;;AAEA;EACE,cAAc;EACd,gBAAgB;EAChB,YAAY;EACZ,aAAa;EACb,eAAe;EACf,mBAAmB;EACnB,8BAA8B;EAC9B,sCAAsC;AACxC;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,SAAS;AACX;;AAEA;EACE,aAAa;EACb,WAAW;EACX,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,YAAY;EACZ,mBAAmB;EACnB,uBAAuB;EACvB,mBAAmB;EACnB,sCAAsC;AACxC;;AAEA;EACE,8BAA8B;EAC9B,cAAc;EACd,eAAe;EACf,YAAY;AACd;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,sCAAsC;AACxC;;AAEA;EACE,aAAa;EACb,YAAY;EACZ,mBAAmB;EACnB,yBAAyB;EACzB,eAAe;AACjB;;AAEA;EACE,YAAY;EACZ,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,cAAc;EACd,aAAa;EACb,WAAW;EACX,uCAAuC;AACzC;;AAEA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;;AAEA;EACE,gBAAgB;EAChB,kBAAkB;EAClB,aAAa;EACb,sCAAsC;EACtC,YAAY;EACZ,kBAAkB;EAClB,eAAe;EACf,YAAY;AACd","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');\n\n:root {\n  --primary-color: rgba(135, 63, 236, 0.968);\n  --text-color: rgb(15, 14, 14);\n  --white-color: #fff;\n  --text-font: 15px;\n  --heading-large-font: 25px;\n  --heading-medium-font: 30px;\n}\n\n* {\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background: linear-gradient(to right, rgba(103, 10, 232, 0.634), rgba(181, 7, 181, 0.618));\n  font-family: 'Lato', sans-serif;\n  scroll-behavior: smooth;\n}\n\nmain {\n  display: flex;\n  margin-top: 50px;\n  width: 100%;\n  justify-content: center;\n}\n\n.score-section {\n  background: var(--white-color);\n  margin: 30px;\n  flex-basis: 45%;\n  min-height: 500px;\n}\n\n.score-section header {\n  width: 100%;\n  height: 60px;\n  position: relative;\n  background-color: var(--primary-color);\n}\n\n.score-section header .header-container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 20px;\n}\n\n.logo {\n  position: fixed;\n  top: 20px;\n  color: white;\n}\n\n.title-container {\n  display: flex;\n  gap: 10px;\n  color: white;\n  position: relative;\n  bottom: 10px;\n}\n\n.title-container img {\n  width: 30px;\n}\n\n.refresh-btn {\n  padding: 12px 30px;\n  position: relative;\n  font-size: var(--text-font);\n  color: var(--primary-color);\n  bottom: 6px;\n  cursor: pointer;\n  border-radius: 4px;\n  border: none;\n  background-color: var(--white-color);\n  transition: 0.1s ease-in-out;\n}\n\nbutton:active {\n  transform: scale(0.9);\n  box-shadow: 2px 6px 24px 6px rgba(0, 0, 0, 0.43);\n  -webkit-box-shadow: 2px 6px 24px 6px rgba(0, 0, 0, 0.43);\n  -moz-box-shadow: 2px 6px 24px 6px rgba(0, 0, 0, 0.43);\n}\n\n.score-section ul {\n  margin: 10px;\n  gap: 40px;\n  max-height: calc(100vh - 250px);\n  overflow: auto;\n  padding-right: 10px;\n}\n\n.score-section ul::-webkit-scrollbar {\n  background-color: transparent;\n  width: 5px;\n}\n\n.score-section ul::-webkit-scrollbar-thumb {\n  background-color: var(--primary-color);\n  border-radius: 10px;\n}\n\n.score-section ul li {\n  margin: 20px 0;\n  list-style: none;\n  height: 70px;\n  display: flex;\n  padding: 0 20px;\n  align-items: center;\n  justify-content: space-between;\n  border: 1px solid rgba(0, 0, 0, 0.222);\n}\n\n.person-info {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n\n.score-section ul li .person-infos-icon {\n  display: flex;\n  width: 50px;\n  position: relative;\n  right: 10px;\n  color: white;\n  height: 50px;\n  border-radius: 100%;\n  justify-content: center;\n  align-items: center;\n  background-color: var(--primary-color);\n}\n\n.form-section {\n  background: var(--white-color);\n  margin: 30px 0;\n  flex-basis: 30%;\n  height: 100%;\n}\n\n.form-section header {\n  width: 100%;\n  height: 60px;\n  background-color: var(--primary-color);\n}\n\n.form-section header .header-container {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  color: var(--white-color);\n  padding: 0 20px;\n}\n\n.form-section form {\n  margin: 20px;\n  display: flex;\n  flex-direction: column;\n}\n\n.form-section form .input-container {\n  margin: 10px 0;\n  display: flex;\n  width: 100%;\n  border: 0.5px solid rgba(0, 0, 0, 0.36);\n}\n\n.form-section form .input-container input {\n  padding: 15px 20px;\n  width: 100%;\n  border: none;\n}\n\n.form-section form button {\n  margin-top: 20px;\n  padding: 15px 20px;\n  outline: none;\n  background-color: var(--primary-color);\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  color: white;\n}\n"],"sourceRoot":""}]);
+
+.loader {
+  display: none;
+}
+
+.form-section form button.loading h4 {
+  display: none;
+}
+
+/* //loading spinner */
+.form-section form button.loading .loader {
+  display: block;
+}
+`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAEA;EACE,0CAA0C;EAC1C,6BAA6B;EAC7B,mBAAmB;EACnB,iBAAiB;EACjB,0BAA0B;EAC1B,2BAA2B;AAC7B;;AAEA;EACE,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,0FAA0F;EAC1F,+BAA+B;EAC/B,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,gBAAgB;EAChB,WAAW;EACX,uBAAuB;AACzB;;AAEA;EACE,8BAA8B;EAC9B,YAAY;EACZ,eAAe;EACf,iBAAiB;AACnB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,kBAAkB;EAClB,sCAAsC;AACxC;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,aAAa;AACf;;AAEA;EACE,eAAe;EACf,SAAS;EACT,YAAY;AACd;;AAEA;EACE,aAAa;EACb,SAAS;EACT,YAAY;EACZ,kBAAkB;EAClB,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,kBAAkB;EAClB,kBAAkB;EAClB,2BAA2B;EAC3B,2BAA2B;EAC3B,YAAY;EACZ,eAAe;EACf,kBAAkB;EAClB,YAAY;EACZ,oCAAoC;EACpC,4BAA4B;AAC9B;;AAEA;EACE,oCAAoC;EACpC,YAAY;AACd;;AAEA;EACE;IACE,iCAAiC;EACnC;AACF;;AAEA;EACE,qBAAqB;EACrB,gDAAgD;EAChD,wDAAwD;EACxD,qDAAqD;AACvD;;AAEA;EACE,YAAY;EACZ,SAAS;EACT,+BAA+B;EAC/B,cAAc;EACd,mBAAmB;AACrB;;AAEA;EACE,WAAW;EACX,aAAa;EACb,aAAa;EACb,mBAAmB;EACnB,uBAAuB;AACzB;;AAEA;EACE,6BAA6B;EAC7B,UAAU;AACZ;;AAEA;EACE,sCAAsC;EACtC,mBAAmB;AACrB;;AAEA;EACE,cAAc;EACd,gBAAgB;EAChB,YAAY;EACZ,aAAa;EACb,eAAe;EACf,mBAAmB;EACnB,8BAA8B;EAC9B,sCAAsC;AACxC;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,SAAS;AACX;;AAEA;EACE,aAAa;EACb,WAAW;EACX,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,YAAY;EACZ,mBAAmB;EACnB,uBAAuB;EACvB,mBAAmB;EACnB,sCAAsC;AACxC;;AAEA;EACE,8BAA8B;EAC9B,cAAc;EACd,eAAe;EACf,YAAY;AACd;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,sCAAsC;AACxC;;AAEA;EACE,aAAa;EACb,YAAY;EACZ,mBAAmB;EACnB,yBAAyB;EACzB,eAAe;AACjB;;AAEA;EACE,YAAY;EACZ,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,cAAc;EACd,aAAa;EACb,WAAW;EACX,uCAAuC;AACzC;;AAEA;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;;AAEA;EACE,gBAAgB;EAChB,kBAAkB;EAClB,aAAa;EACb,sCAAsC;EACtC,YAAY;EACZ,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,uBAAuB;AACzB;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;AACf;;AAEA,sBAAsB;AACtB;EACE,cAAc;AAChB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');\n\n:root {\n  --primary-color: rgba(135, 63, 236, 0.968);\n  --text-color: rgb(15, 14, 14);\n  --white-color: #fff;\n  --text-font: 15px;\n  --heading-large-font: 25px;\n  --heading-medium-font: 30px;\n}\n\n* {\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background: linear-gradient(to right, rgba(103, 10, 232, 0.634), rgba(181, 7, 181, 0.618));\n  font-family: 'Lato', sans-serif;\n  scroll-behavior: smooth;\n}\n\nmain {\n  display: flex;\n  margin-top: 50px;\n  width: 100%;\n  justify-content: center;\n}\n\n.score-section {\n  background: var(--white-color);\n  margin: 30px;\n  flex-basis: 45%;\n  min-height: 500px;\n}\n\n.score-section header {\n  width: 100%;\n  height: 60px;\n  position: relative;\n  background-color: var(--primary-color);\n}\n\n.score-section header .header-container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 20px;\n}\n\n.logo {\n  position: fixed;\n  top: 20px;\n  color: white;\n}\n\n.title-container {\n  display: flex;\n  gap: 10px;\n  color: white;\n  position: relative;\n  bottom: 10px;\n}\n\n.title-container img {\n  width: 30px;\n}\n\n.refresh-btn {\n  padding: 12px 30px;\n  position: relative;\n  font-size: var(--text-font);\n  color: var(--primary-color);\n  bottom: 10px;\n  cursor: pointer;\n  border-radius: 4px;\n  border: none;\n  background-color: var(--white-color);\n  transition: 0.1s ease-in-out;\n}\n\n.refresh-btn.loading i {\n  animation: spin 0.5s linear infinite;\n  height: 10px;\n}\n\n@keyframes spin {\n  to {\n    -webkit-transform: rotate(360deg);\n  }\n}\n\nbutton:active {\n  transform: scale(0.9);\n  box-shadow: 2px 6px 24px 6px rgba(0, 0, 0, 0.43);\n  -webkit-box-shadow: 2px 6px 24px 6px rgba(0, 0, 0, 0.43);\n  -moz-box-shadow: 2px 6px 24px 6px rgba(0, 0, 0, 0.43);\n}\n\n.score-section ul {\n  margin: 10px;\n  gap: 40px;\n  max-height: calc(100vh - 250px);\n  overflow: auto;\n  padding-right: 10px;\n}\n\n.loading-indicator {\n  width: 100%;\n  height: 200px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.score-section ul::-webkit-scrollbar {\n  background-color: transparent;\n  width: 5px;\n}\n\n.score-section ul::-webkit-scrollbar-thumb {\n  background-color: var(--primary-color);\n  border-radius: 10px;\n}\n\n.score-section ul li {\n  margin: 20px 0;\n  list-style: none;\n  height: 70px;\n  display: flex;\n  padding: 0 20px;\n  align-items: center;\n  justify-content: space-between;\n  border: 1px solid rgba(0, 0, 0, 0.222);\n}\n\n.person-info {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n\n.score-section ul li .person-infos-icon {\n  display: flex;\n  width: 50px;\n  position: relative;\n  right: 10px;\n  color: white;\n  height: 50px;\n  border-radius: 100%;\n  justify-content: center;\n  align-items: center;\n  background-color: var(--primary-color);\n}\n\n.form-section {\n  background: var(--white-color);\n  margin: 30px 0;\n  flex-basis: 30%;\n  height: 100%;\n}\n\n.form-section header {\n  width: 100%;\n  height: 60px;\n  background-color: var(--primary-color);\n}\n\n.form-section header .header-container {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  color: var(--white-color);\n  padding: 0 20px;\n}\n\n.form-section form {\n  margin: 20px;\n  display: flex;\n  flex-direction: column;\n}\n\n.form-section form .input-container {\n  margin: 10px 0;\n  display: flex;\n  width: 100%;\n  border: 0.5px solid rgba(0, 0, 0, 0.36);\n}\n\n.form-section form .input-container input {\n  padding: 15px 20px;\n  width: 100%;\n  border: none;\n}\n\n.form-section form button {\n  margin-top: 20px;\n  padding: 15px 20px;\n  outline: none;\n  background-color: var(--primary-color);\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  color: white;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.loader {\n  display: none;\n}\n\n.form-section form button.loading h4 {\n  display: none;\n}\n\n/* //loading spinner */\n.form-section form button.loading .loader {\n  display: block;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -653,6 +688,90 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/components/score.js":
+/*!*********************************!*\
+  !*** ./src/components/score.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const scoreEl = (name, score) => {
+  const generateIcon = name.split('')[0];
+  const element = document.createElement('li');
+  element.className = 'person-info';
+  element.innerHTML = `
+    <div class="person-info">
+    <div class="person-infos-icon">
+        <h1>${generateIcon}</h1>
+    </div>
+    <h4>${name}</h4>
+    </div>
+
+
+   <div class="score-infos">
+    <p>score: <strong>${score}</strong></p>
+    </div>
+    `;
+  return element;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scoreEl);
+
+/***/ }),
+
+/***/ "./src/utilities/networking.js":
+/*!*************************************!*\
+  !*** ./src/utilities/networking.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   fetchScores: () => (/* binding */ fetchScores),
+/* harmony export */   postScore: () => (/* binding */ postScore)
+/* harmony export */ });
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+const uniqueId = 'lvEo1fojlN7C2HMlW2Kg';
+
+const fetchScores = async () => {
+  try {
+    const request = await fetch(`${url}games/${uniqueId}/scores`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    const response = await request.json();
+    return response;
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
+
+const postScore = async (requestBody) => {
+  try {
+    const request = await fetch(`${url}games/${uniqueId}/scores`, {
+      method: 'POST',
+      body: JSON.stringify(requestBody),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    const response = await request.json();
+
+    return response;
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
+
+/***/ }),
+
 /***/ "./src/check.png":
 /*!***********************!*\
   !*** ./src/check.png ***!
@@ -780,22 +899,92 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
 /* harmony import */ var _check_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./check.png */ "./src/check.png");
+/* harmony import */ var _utilities_networking__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utilities/networking */ "./src/utilities/networking.js");
+/* harmony import */ var _components_score__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/score */ "./src/components/score.js");
 
 
-const addScoreForm = document.querySelector("form");
 
 
-//add score
-const sendScore = (e) => {
-    e.preventDefault();
-    console.log("djibril mark")
-}
-addScoreForm.addEventListener("submit",sendScore);
-    
 
+const addScoreForm = document.querySelector('form');
+const userName = document.querySelector('.username');
+const scoreInput = document.querySelector('.scoreInput');
+const scoreList = document.querySelector('ul');
+const submitButton = document.querySelector('.submit-button');
+const listLoadingIndicator = document.querySelector('.loading-indicator');
+const refreshBtn = document.querySelector('.refresh-btn');
+let scoresArr = [];
+
+/// print score
+const printScore = () => {
+  scoreList.innerHTML = '';
+  scoresArr.forEach((score) => {
+    scoreList.appendChild((0,_components_score__WEBPACK_IMPORTED_MODULE_3__["default"])(score.user, score.score));
+  });
+};
+///
+
+// add score
+const sendScore = async (e) => {
+  e.preventDefault();
+  if (userName.value.trim().length === 0 || scoreInput.value.trim().length === 0) {
+    return alert('No value provided');
+  }
+
+  const newScore = {
+    user: userName.value,
+    score: scoreInput.value,
+  };
+  submitButton.disabled = true;
+  submitButton.classList.add('loading');
+  try {
+    await (0,_utilities_networking__WEBPACK_IMPORTED_MODULE_2__.postScore)(newScore);
+    scoresArr.unshift(newScore);
+    printScore();
+    submitButton.disabled = false;
+    submitButton.classList.remove('loading');
+  } catch (error) {
+    alert('failed to register');
+    submitButton.disabled = false;
+  }
+
+  return 'xxx';
+};
+///
+
+// fetch loaded data
+const loadData = async () => {
+  try {
+    const fetch = await (0,_utilities_networking__WEBPACK_IMPORTED_MODULE_2__.fetchScores)();
+    scoresArr = fetch.result;
+    listLoadingIndicator.classList.add('hide');
+    printScore();
+  } catch (error) {
+    listLoadingIndicator.classList.add('hide');
+  }
+};
+//
+
+// refresh
+const refresh = async () => {
+  refreshBtn.classList.add('loading');
+  try {
+    const fetch = await (0,_utilities_networking__WEBPACK_IMPORTED_MODULE_2__.fetchScores)();
+    scoresArr = fetch.result;
+    printScore();
+    refreshBtn.classList.remove('loading');
+  } catch (error) {
+    alert('fail to refresh.');
+    refreshBtn.classList.remove('loading');
+  }
+};
+
+addScoreForm.addEventListener('submit', sendScore);
+window.addEventListener('load', loadData);
+refreshBtn.addEventListener('click', refresh);
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main962ef135784d8abd9104.js.map
+//# sourceMappingURL=main6910977747916575dccb.js.map
