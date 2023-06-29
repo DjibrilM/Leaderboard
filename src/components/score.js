@@ -5,7 +5,7 @@ const scoreEl = (name, score) => {
   element.innerHTML = `
     <div class="person-info">
     <div class="person-infos-icon">
-        <h1>${generateIcon}</h1>
+        <h2>${generateIcon}</h2>
     </div>
     <h4>${name}</h4>
     </div>
