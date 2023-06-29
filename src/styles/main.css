@@ -34,14 +34,14 @@ main {
   min-height: 500px;
 }
 
-.score-section header {
+.score-section .header {
   width: 100%;
   height: 60px;
   position: relative;
   background-color: var(--primary-color);
 }
 
-.score-section header .header-container {
+.score-section .header .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -160,13 +160,13 @@ button:active {
   height: 100%;
 }
 
-.form-section header {
+.form-section .header {
   width: 100%;
   height: 60px;
   background-color: var(--primary-color);
 }
 
-.form-section header .header-container {
+.form-section .header .header-container {
   display: flex;
   height: 100%;
   align-items: center;
