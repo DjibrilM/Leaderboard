@@ -12,8 +12,6 @@ const listLoadingIndicator = document.querySelector('.loading-indicator');
 const refreshBtn = document.querySelector('.refresh-btn');
 let scoresArr = [];
 
-
-
 /// print score
 const printScore = () => {
   scoreList.innerHTML = '';
